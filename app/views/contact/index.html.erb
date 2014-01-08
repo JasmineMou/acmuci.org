@@ -1,0 +1,39 @@
+<section id="content">
+	<div class="inner">
+		<div id="contact" class="content-block">
+			<h2>Contact Us</h2>
+
+      <%= form_for contact_send_email_path do |f| %>
+				<p>
+          <%= f.label :name, 'Full Name' %> <br />
+          <%= f.text_field :name, required: true %>
+				</p>
+				<p>
+          <%= f.label :email, 'Email' %> <br />
+          <%= f.text_field :email, required: true, placeholder: 'example@uci.edu' %>
+				</p>
+				<p>
+          <%= f.label :message, 'Message' %> <br />
+          <%= f.text_area :message, required: true %>
+				<p>
+          <%= f.submit 'Send' %>
+				</p>
+
+				<div class="success">
+					<p>Successfully sent message!</p>
+				</div>
+      <% end %>
+
+			<div class="caption">
+				<p>Need to get in contact with someone in specific? You could
+				try searching through our <a
+				href="http://www.facebook.com/groups/228954137162541/">
+				Facebook Group</a>.</p>
+
+				<p>If you can't seem to get a hold of us, try attending one of
+				our events or visiting the scheduled meeting places as shown at
+				the bottom of this page.</p>
+			</div>
+		</div>
+	</div>
+</section>

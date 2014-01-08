@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  desc: MyText
+  datetime: 2013-11-24 08:41:15
+  room_id: 1
+  bldg_id: 1
+  facebook_id: 1
+
+two:
+  name: MyString
+  desc: MyText
+  datetime: 2013-11-24 08:41:15
+  room_id: 1
+  bldg_id: 1
+  facebook_id: 1

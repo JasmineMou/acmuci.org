@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= Acmorg::Application::SITE_NAME %></title>
+
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+<div id="ribbon">&nbsp;</div>
+<header id="page-header">
+	<div class="inner">
+		<div id="meta">
+			<h1>
+        <img src="images/logo.png" title="ACM" />
+        <span id="chapter_tag">UC Irvine Chapter</span></a>
+			</h1>
+			<nav id="page-nav">
+          <%= link_to 'Home', home_path %>
+          <%= link_to 'Events', 'https://www.facebook.com/groups/228954137162541/events/' %>
+          <%= link_to 'About', about_path %>
+          <%= link_to 'Contact', contact_path %>
+			</nav>
+		</div>
+
+		<div id="tagline">We compete in intercollegiate competitions and
+		develop your ideas into projects</div>
+
+		<p>Interested? There are no requirements to join; in fact, we encourage
+		you to join if you have no experience. Consider attending one of our
+		meetings that we hold once a week at <strong><%= Acmorg::Application::ORG_ROOM %></strong>
+		at <strong><%= Acmorg::Application::ORG_TIME %></strong>.  Our chapter hosts a variety of
+		events including workshops by UCI students to share knowledge and
+		presentations by distinguished speakers about new ideas. <strong>We
+		also love coffee.</strong></p>
+
+		<a href="http://www.facebook.com/groups/228954137162541/"
+		class="button">Join ACM</a>
+	</div>
+</header>
+
+<%= yield %>
+
+<footer id="page-footer">
+	<div class="inner">
+		<nav id="page-footer-nav">
+      <%= link_to 'Home', home_path %>
+      <%= link_to 'Events', 'https://www.facebook.com/groups/228954137162541/events/' %>
+      <%= link_to 'About', about_path %>
+      <%= link_to 'Contact', contact_path %>
+		</nav>
+
+		<div id="locations-collection">
+			<div class="address">
+				<h3>Competitions Practice</h3>
+				Every Tuesday &amp; Wednesday<br />
+				Room 1112<br />
+				Engineering Hall (EH)<br />
+			</div>
+			<div class="address">
+				<h3>Theory Group Meetings</h3>
+				Quarterly<br />
+				Room TBA<br />
+				Donald Bren Hall (DBH)<br />
+			</div>
+			<div class="address">
+				<h3>Impromptu Meetings</h3>
+				Whenever<br />
+				Starbakes<br />
+				Student Center (SC)<br />
+			</div>
+		</div>
+
+		<div id="copyright">
+			Copyright &copy; 2011, 2012, 2013 ACM, UC Irvine. All Rights Reserved.<br
+			/> Design by <a href="http://www.giocc.com/" title="GioCC">Gio
+			Borje</a>.
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

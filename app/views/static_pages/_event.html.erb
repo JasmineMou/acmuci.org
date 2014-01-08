@@ -1,0 +1,12 @@
+<article>
+	<footer>
+		<%= event.datetime.strftime('%b. %d, %Y') %>
+    <a href="http://www.uci.edu/campusmap/map.php?l=1&q=<%= event.bldg_id %>" target="_blank">
+      @<%= event.bldg_id %>
+    </a>
+	</footer>
+	<h3>
+    <%= event.name %>
+	</h3>
+	<p><%= event.desc %></p>
+</article>
