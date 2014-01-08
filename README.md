@@ -31,6 +31,7 @@ Start the server
 
 
 ```
+rvm use
 rails server
 ```
 
