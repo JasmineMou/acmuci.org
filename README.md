@@ -27,7 +27,7 @@ Install all dependencies
 bundle install
 ```
 
-5. Start the server
+Start the server
 
 
 ```
