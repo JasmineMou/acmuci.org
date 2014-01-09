@@ -1,4 +1,6 @@
 Acmorg::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   # Static pages
   root 'static_pages#home'
 
