@@ -1,15 +1,15 @@
 class ContactController < ApplicationController
-  def index
+  def show
     @feedback = Feedback.new
   end
 
-  def send_email
+  def create
     @feedback = Feedback.new(email_params)
     if @feedback.valid?
       OrganizationMailer.deliver_feedback({from: @feedback.email, subject: @feedback.name}, @feedback.message)
-      redirect_to action: 'index'
+      redirect_to action: 'show'
     else
-      render action: 'index'
+      render action: 'show'
     end
   end
 

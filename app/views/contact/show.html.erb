@@ -3,7 +3,7 @@
 		<div id="contact" class="content-block">
 			<h2>Contact Us</h2>
 
-      <%= form_for contact_send_email_path do |f| %>
+      <%= form_for contact_path do |f| %>
 				<p>
           <%= f.label :name, 'Full Name' %> <br />
           <%= f.text_field :name, required: true %>

@@ -6,10 +6,7 @@ Acmorg::Application.routes.draw do
   get 'about', to: 'static_pages#about'
 
   # Contact Us
-  get 'contact', to: 'contact#index'
-  post 'contact#send_email', to: 'contact#send_email', as: 'contact_send_email'
-
-  resource :events
+  resource :contact, only: [:show, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
