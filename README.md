@@ -1,3 +1,6 @@
+acmuci.org
+==========
+
 Local Installation
 ------------------
 
@@ -31,7 +34,14 @@ Start the server
 
 
 ```
+rvm use
 rails server
 ```
 
-The website should now be available at `http://localhost:3000
+The website should now be available at `http://localhost:3000`
+
+Rails Environment
+-----------------
+
+- Ruby Version: 2.x
+- Rails version: 4.x
