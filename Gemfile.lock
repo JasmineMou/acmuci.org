@@ -130,6 +130,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.0.0)
+  rspec-mocks (~> 3.0.0.beta)
   rspec-rails (~> 3.0.0.beta)
   sass-rails (~> 4.0.0)
   sdoc
