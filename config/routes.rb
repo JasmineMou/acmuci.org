@@ -9,6 +9,7 @@ Acmorg::Application.routes.draw do
 
   # Contact Us
   resource :contact, only: [:show, :create]
+  resources :projects, only: [:index, :create] 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
