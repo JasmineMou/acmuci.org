@@ -13,6 +13,7 @@ ActiveAdmin.register Contact do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-  permit_params :name, :email, :phone
+  
+
   
 end

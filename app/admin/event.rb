@@ -13,5 +13,6 @@ ActiveAdmin.register Event do
   #  permitted << :other if resource.something?
   #  permitted
   # end
+  permit_params :name, :desc, :datetime 
   
 end

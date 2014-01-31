@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140124212810) do
+ActiveRecord::Schema.define(version: 20140131205053) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -74,6 +74,16 @@ ActiveRecord::Schema.define(version: 20140124212810) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "opportunities", force: true do |t|
+    t.integer  "contact_id"
+    t.integer  "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "opportunities", ["contact_id"], name: "index_opportunities_on_contact_id"
+  add_index "opportunities", ["event_id"], name: "index_opportunities_on_event_id"
 
   create_table "projects", force: true do |t|
     t.string   "title"
