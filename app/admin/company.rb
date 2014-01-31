@@ -1,4 +1,4 @@
-ActiveAdmin.register Event do
+ActiveAdmin.register Company do
 
   
   # See permitted parameters documentation:
@@ -13,6 +13,9 @@ ActiveAdmin.register Event do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-  permit_params :name, :desc, :datetime 
+
+  permit_params :name, :industry
+  
+
   
 end
