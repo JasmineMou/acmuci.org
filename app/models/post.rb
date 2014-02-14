@@ -1,4 +1,4 @@
 class Post < ActiveRecord::Base
   belongs_to :category
-  belongs_to :admin_user
+  has_one :admin_user
 end
