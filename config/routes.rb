@@ -6,7 +6,9 @@ Acmorg::Application.routes.draw do
 
   get 'home', to: 'static_pages#home'
   get 'about', to: 'static_pages#about'
-
+  
+  resources :news, only: [:index, :show]
+  
   # Contact Us
   resource :contact, only: [:show, :create]
   resources :projects, only: [:index, :create] 

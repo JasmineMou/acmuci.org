@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140214210817) do
+ActiveRecord::Schema.define(version: 20140214211850) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -90,6 +90,18 @@ ActiveRecord::Schema.define(version: 20140214210817) do
 
   add_index "opportunities", ["contact_id"], name: "index_opportunities_on_contact_id"
   add_index "opportunities", ["event_id"], name: "index_opportunities_on_event_id"
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "category_id"
+    t.integer  "admin_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "posts", ["admin_id"], name: "index_posts_on_admin_id"
+  add_index "posts", ["category_id"], name: "index_posts_on_category_id"
 
   create_table "projects", force: true do |t|
     t.string   "title"
