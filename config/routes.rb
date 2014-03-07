@@ -7,7 +7,9 @@ Acmorg::Application.routes.draw do
   get 'home', to: 'static_pages#home'
   get 'about', to: 'static_pages#about'
   
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
   
   resources :news, only: [:index, :show]
   
